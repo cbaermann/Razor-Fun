@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>razorFun</title>
+    </head>
+
+
+        <body>
+            <h1>here are some delicious food!</h1>
+
+            @{
+                var FoodList = new List<string>
+                    {
+                        "Kiwi",
+                        "Bananas",
+                        "Orange",
+                        "Apple",
+                        "Pasta",
+                        "Steak",
+                        "Burgers",
+                        "Calimari",
+                    };
+                    foreach(var food in FoodList)
+                    {
+                        <div class="foodList">
+                            @if(food[0]=='C')
+                            {
+                                <p style="color: red;">@food</p>
+                            }
+                            else
+                            {
+                                <p>@food</p>
+                            }
+                        </div>
+                    }
+            }
+            
+        </body>
+</html>
